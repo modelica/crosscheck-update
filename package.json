@@ -4,10 +4,9 @@
     "description": "Code for updating the FMI cross-check data",
     "main": "lib/index.js",
     "scripts": {
-        "genmod": "node genmodules.js > .gitmodules",
-        "update": "git submodule init && git submodule update",
-        "deinit": "git submodule deinit --force .",
-        "build": "npm run genmod && npm run update",
+        "init": "node clone.js",
+        "update": "node update.js",
+        "build": "npm run update && process_repo vendors/*",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

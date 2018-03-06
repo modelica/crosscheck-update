@@ -1,3 +1,4 @@
 #!/bin/sh
 
-echo "Nothing for now"
+cd data
+npm run build
