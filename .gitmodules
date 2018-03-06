@@ -1,3 +1,193 @@
-[submodule "vendors/controllab"]
-	path = vendors/controllab
-	url = https://github.com/fmi-crosscheck/controllab
+[submodule "vendors/3DS"]
+    path = vendors/3DS
+    url = https://github.com/fmi-crosscheck/3DS
+[submodule "vendors/ANSYS"]
+    path = vendors/ANSYS
+    url = https://github.com/fmi-crosscheck/ANSYS
+[submodule "vendors/AVL"]
+    path = vendors/AVL
+    url = https://github.com/fmi-crosscheck/AVL
+[submodule "vendors/Algoryx"]
+    path = vendors/Algoryx
+    url = https://github.com/fmi-crosscheck/Algoryx
+[submodule "vendors/Altair"]
+    path = vendors/Altair
+    url = https://github.com/fmi-crosscheck/Altair
+[submodule "vendors/CarSim"]
+    path = vendors/CarSim
+    url = https://github.com/fmi-crosscheck/CarSim
+[submodule "vendors/Claytex"]
+    path = vendors/Claytex
+    url = https://github.com/fmi-crosscheck/Claytex
+[submodule "vendors/Cosimate"]
+    path = vendors/Cosimate
+    url = https://github.com/fmi-crosscheck/Cosimate
+[submodule "vendors/Cybernetica"]
+    path = vendors/Cybernetica
+    url = https://github.com/fmi-crosscheck/Cybernetica
+[submodule "vendors/Dofware"]
+    path = vendors/Dofware
+    url = https://github.com/fmi-crosscheck/Dofware
+[submodule "vendors/Dynardo"]
+    path = vendors/Dynardo
+    url = https://github.com/fmi-crosscheck/Dynardo
+[submodule "vendors/EDF"]
+    path = vendors/EDF
+    url = https://github.com/fmi-crosscheck/EDF
+[submodule "vendors/ESi"]
+    path = vendors/ESi
+    url = https://github.com/fmi-crosscheck/ESi
+[submodule "vendors/ETAS"]
+    path = vendors/ETAS
+    url = https://github.com/fmi-crosscheck/ETAS
+[submodule "vendors/EcosimPro"]
+    path = vendors/EcosimPro
+    url = https://github.com/fmi-crosscheck/EcosimPro
+[submodule "vendors/Exothermia"]
+    path = vendors/Exothermia
+    url = https://github.com/fmi-crosscheck/Exothermia
+[submodule "vendors/FEV"]
+    path = vendors/FEV
+    url = https://github.com/fmi-crosscheck/FEV
+[submodule "vendors/FMI"]
+    path = vendors/FMI
+    url = https://github.com/fmi-crosscheck/FMI
+[submodule "vendors/FunctionBay"]
+    path = vendors/FunctionBay
+    url = https://github.com/fmi-crosscheck/FunctionBay
+[submodule "vendors/GammaTechnologies"]
+    path = vendors/GammaTechnologies
+    url = https://github.com/fmi-crosscheck/GammaTechnologies
+[submodule "vendors/IBM"]
+    path = vendors/IBM
+    url = https://github.com/fmi-crosscheck/IBM
+[submodule "vendors/IFP"]
+    path = vendors/IFP
+    url = https://github.com/fmi-crosscheck/IFP
+[submodule "vendors/IPG"]
+    path = vendors/IPG
+    url = https://github.com/fmi-crosscheck/IPG
+[submodule "vendors/IntoCPS"]
+    path = vendors/IntoCPS
+    url = https://github.com/fmi-crosscheck/IntoCPS
+[submodule "vendors/LBL"]
+    path = vendors/LBL
+    url = https://github.com/fmi-crosscheck/LBL
+[submodule "vendors/LIU"]
+    path = vendors/LIU
+    url = https://github.com/fmi-crosscheck/LIU
+[submodule "vendors/MSC"]
+    path = vendors/MSC
+    url = https://github.com/fmi-crosscheck/MSC
+[submodule "vendors/Maplesoft"]
+    path = vendors/Maplesoft
+    url = https://github.com/fmi-crosscheck/Maplesoft
+[submodule "vendors/Mentor"]
+    path = vendors/Mentor
+    url = https://github.com/fmi-crosscheck/Mentor
+[submodule "vendors/MoBA"]
+    path = vendors/MoBA
+    url = https://github.com/fmi-crosscheck/MoBA
+[submodule "vendors/Modelon"]
+    path = vendors/Modelon
+    url = https://github.com/fmi-crosscheck/Modelon
+[submodule "vendors/MpCCI"]
+    path = vendors/MpCCI
+    url = https://github.com/fmi-crosscheck/MpCCI
+[submodule "vendors/NI"]
+    path = vendors/NI
+    url = https://github.com/fmi-crosscheck/NI
+[submodule "vendors/NoMagic"]
+    path = vendors/NoMagic
+    url = https://github.com/fmi-crosscheck/NoMagic
+[submodule "vendors/OM"]
+    path = vendors/OM
+    url = https://github.com/fmi-crosscheck/OM
+[submodule "vendors/PMSF"]
+    path = vendors/PMSF
+    url = https://github.com/fmi-crosscheck/PMSF
+[submodule "vendors/PodiumTechnology"]
+    path = vendors/PodiumTechnology
+    url = https://github.com/fmi-crosscheck/PodiumTechnology
+[submodule "vendors/QTronic"]
+    path = vendors/QTronic
+    url = https://github.com/fmi-crosscheck/QTronic
+[submodule "vendors/Ricardo"]
+    path = vendors/Ricardo
+    url = https://github.com/fmi-crosscheck/Ricardo
+[submodule "vendors/SIANI"]
+    path = vendors/SIANI
+    url = https://github.com/fmi-crosscheck/SIANI
+[submodule "vendors/SINTEF"]
+    path = vendors/SINTEF
+    url = https://github.com/fmi-crosscheck/SINTEF
+[submodule "vendors/SKF"]
+    path = vendors/SKF
+    url = https://github.com/fmi-crosscheck/SKF
+[submodule "vendors/Scilab"]
+    path = vendors/Scilab
+    url = https://github.com/fmi-crosscheck/Scilab
+[submodule "vendors/Siemens"]
+    path = vendors/Siemens
+    url = https://github.com/fmi-crosscheck/Siemens
+[submodule "vendors/SimWB"]
+    path = vendors/SimWB
+    url = https://github.com/fmi-crosscheck/SimWB
+[submodule "vendors/TLK"]
+    path = vendors/TLK
+    url = https://github.com/fmi-crosscheck/TLK
+[submodule "vendors/TNO"]
+    path = vendors/TNO
+    url = https://github.com/fmi-crosscheck/TNO
+[submodule "vendors/TWT"]
+    path = vendors/TWT
+    url = https://github.com/fmi-crosscheck/TWT
+[submodule "vendors/Tesis-Dynaware"]
+    path = vendors/Tesis-Dynaware
+    url = https://github.com/fmi-crosscheck/Tesis-Dynaware
+[submodule "vendors/UCB"]
+    path = vendors/UCB
+    url = https://github.com/fmi-crosscheck/UCB
+[submodule "vendors/Vector"]
+    path = vendors/Vector
+    url = https://github.com/fmi-crosscheck/Vector
+[submodule "vendors/VirtualMotion"]
+    path = vendors/VirtualMotion
+    url = https://github.com/fmi-crosscheck/VirtualMotion
+[submodule "vendors/Wolfram"]
+    path = vendors/Wolfram
+    url = https://github.com/fmi-crosscheck/Wolfram
+[submodule "vendors/assystem"]
+    path = vendors/assystem
+    url = https://github.com/fmi-crosscheck/assystem
+[submodule "vendors/br-automation"]
+    path = vendors/br-automation
+    url = https://github.com/fmi-crosscheck/br-automation
+[submodule "vendors/dSpace"]
+    path = vendors/dSpace
+    url = https://github.com/fmi-crosscheck/dSpace
+[submodule "vendors/daetools"]
+    path = vendors/daetools
+    url = https://github.com/fmi-crosscheck/daetools
+[submodule "vendors/fluidon"]
+    path = vendors/fluidon
+    url = https://github.com/fmi-crosscheck/fluidon
+[submodule "vendors/froglogic"]
+    path = vendors/froglogic
+    url = https://github.com/fmi-crosscheck/froglogic
+[submodule "vendors/overture"]
+    path = vendors/overture
+    url = https://github.com/fmi-crosscheck/overture
+[submodule "vendors/powersys"]
+    path = vendors/powersys
+    url = https://github.com/fmi-crosscheck/powersys
+[submodule "vendors/tonqyuan"]
+    path = vendors/tonqyuan
+    url = https://github.com/fmi-crosscheck/tonqyuan
+[submodule "vendors/tugraz"]
+    path = vendors/tugraz
+    url = https://github.com/fmi-crosscheck/tugraz
+[submodule "vendors/widle"]
+    path = vendors/widle
+    url = https://github.com/fmi-crosscheck/widle
+
