@@ -19,3 +19,9 @@ This repository is linked to SemaphoreCI. So whenever there is a commit to this
 repository, it will trigger a rebuild of everything. But we **also** want to
 trigger a rebuild if any of the vendor repositories change. Fortunately,
 SemaphoreCI provides a "webhook" that we can invoke to trigger rebuilding as well.
+
+The webhook URL can be found in [the SemaphoreCI settings for this
+project](https://semaphoreci.com/fmi-crosscheck/crosscheck-update/settings/repository).
+**That URL should be added as a webhook in all vendor repositories** (current
+and **new**). By adding that web hook, any change to the vendor repositories
+will also trigger a rebuild for this repository.
