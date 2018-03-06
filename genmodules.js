@@ -10,7 +10,7 @@ let files = [
     "Altair",
     "CarSim",
     "Claytex",
-    // "Controllab",
+    "Controllab",
     "Cosimate",
     "Cybernetica",
     "Dofware",

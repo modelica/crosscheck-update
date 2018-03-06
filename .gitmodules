@@ -19,6 +19,9 @@
 [submodule "vendors/Claytex"]
     path = vendors/Claytex
     url = https://github.com/fmi-crosscheck/Claytex
+[submodule "vendors/Controllab"]
+    path = vendors/Controllab
+    url = https://github.com/fmi-crosscheck/Controllab
 [submodule "vendors/Cosimate"]
     path = vendors/Cosimate
     url = https://github.com/fmi-crosscheck/Cosimate
