@@ -4,24 +4,27 @@ This repository is used as part of the continuous integration (CI) processs used
 FMI cross-check results. There is very little value in anybody else checking this
 repository out since it's only real value is to be part of the CI process.
 
+# Docker Image
+
+The `Dockerfile` in this repository describes how to build the Docker image
+associated with this repository. The Docker image is named
+`modelica/crosscheck-update` and it is rebuilt automatically whenever there is a
+push to this repository.
+
 # Maintenance
 
-The list of all vendor IDs is contained in the file `genmodules.js`. The build
-process is triggered by running `npm run build`. This invokes the
-`genmodules.js` file which generates a `.gitmodules` file that associates all
-the named vendor repositories with this one. The `npm run build` script then
-checks out all the vendor repositories as Git submodules. Finally, it runs
-the `process_repo` script supplied by the `@modelica/fmi-xc-scripts` repository.
+The list of all vendor IDs is contained in the file `vendors.json`. This is the
+main piece that might change over time.
+
+The `start.sh` script initializes the server by downloading all vendor
+repositories. The `build.sh` script is called whenever the webhook is called
+(see below). Ultimately, the `process_repo` script from the
+`@modelica/fmi-xc-scripts` module is called to do the processing.
 
 # Webhooks
 
-This repository is linked to SemaphoreCI. So whenever there is a commit to this
-repository, it will trigger a rebuild of everything. But we **also** want to
-trigger a rebuild if any of the vendor repositories change. Fortunately,
-SemaphoreCI provides a "webhook" that we can invoke to trigger rebuilding as well.
-
-The webhook URL can be found in [the SemaphoreCI settings for this
-project](https://semaphoreci.com/fmi-crosscheck/crosscheck-update/settings/repository).
-**That URL should be added as a webhook in all vendor repositories** (current
-and **new**). By adding that web hook, any change to the vendor repositories
-will also trigger a rebuild for this repository.
+The `Dockerfile` configures a webhook server to be run when this image is
+launched. The webhook server is listening on port 9000. Any `POST` operation
+to `/hooks/fmi-build` on that port will trigger a rebuild. This webhook can be
+trivially configured in a vendor's GitHub repository so that a `push` to that
+repository triggers a rebuild.
