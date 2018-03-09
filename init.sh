@@ -1,7 +1,12 @@
 #!/bin/sh
 
+## This script is responsible for all "start up" tasks.  This mainly means grabbing
+## baseline copies of all repositories.
+
 # Update Git settings so we don't grab unnecessarily files
 cp data/.gitconfig ~/.gitconfig
+
+git clone https://github.com/modelica/fmi-standard.org.git site
 
 # Update the repositories to the latest versions.  This takes care of
 # downloading an initial version of all vendor repositories.  These
@@ -10,5 +15,3 @@ cp data/.gitconfig ~/.gitconfig
 cd data
 
 npm run init
-
-webhook -verbose -hooks=/etc/webhooks/hooks.json
