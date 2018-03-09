@@ -13,5 +13,14 @@ git clone https://github.com/modelica/fmi-standard.org.git site
 # will be updated on each build, but this gets the overhead of the
 # initial download out of the way
 cd data
+node clone.js
 
-npm run init
+# Now go into the directory for the web site
+cd site
+
+# Grab the dynamic branch (for now)
+git reset --hard origin/dynamic
+git checkout dynamic
+
+# An initial install of gems needed to build site
+bundle install --path _vendor/bundle

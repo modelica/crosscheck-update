@@ -1,7 +1,7 @@
 [
     {
         "id": "fmi-build",
-        "execute-command": "/usr/build/build.sh",
-        "command-working-directory": "/usr/build"
+        "execute-command": "/home/builder/build.sh",
+        "command-working-directory": "/home/builder"
     }
 ]
