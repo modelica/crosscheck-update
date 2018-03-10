@@ -6,7 +6,9 @@
     "scripts": {
         "image": "docker build -t modelica/fmi-build .",
         "start":
-            "docker run -p 9001:9000 -i -t -v `pwd`/vendors:/home/builder/data/vendors -v `pwd`/site:/home/builder/data/site modelica/fmi-build",
+            "docker run -p 9001:9000 -i -t -e AWS_ACCESS_KEY=$AWS_ACCESS_KEY -e AWS_SECRET_KEY=$AWS_SECRET_KEY modelica/fmi-build",
+        "start:local":
+            "docker run -p 9001:9000 -i -t -e AWS_ACCESS_KEY=$AWS_ACCESS_KEY -e AWS_SECRET_KEY=$AWS_SECRET_KEY -v `pwd`/vendors:/home/builder/data/vendors -v `pwd`/site:/home/builder/data/site modelica/fmi-build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

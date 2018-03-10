@@ -1,3 +1,6 @@
+## This script creates a Docker image that is capable of integrating FMI cross-check data and 
+## uploading it to the FMI web site.
+
 # Use this as the base image
 FROM ubuntu:17.10
 
@@ -23,24 +26,28 @@ RUN mkdir /etc/webhooks
 # ...and copy that file there.
 COPY hooks.json /etc/webhooks
 
-# CREATE a non-root user and work in /home/builder
+# Create a non-root user to do the actual work and a home directory for that
+# user in /home/builder
 RUN useradd -ms /bin/bash builder
 
-# Make a build directory to do all our work in
-# Copy our build and start scripts there
+# Copy our build and start scripts to the working directory
 COPY build.sh init.sh gen.sh webhook.sh /home/builder/
-# ...and make them executable
 
 # Now create a data directory for all the vendor data
 RUN mkdir /home/builder/data /home/builder/data/vendors
 # Copy the files from this repository into the image so they are available there
-COPY .gitconfig clone.js update.js package.json yarn.lock vendors.json /home/builder/data/
+COPY .gitconfig s3.cfg clone.js update.js package.json yarn.lock vendors.json /home/builder/data/
 
 # Make directory for the site
-RUN mkdir /home/builder/data/site
+RUN mkdir /home/builder/data/site /home/builder/data/output
 
 # Expose port 9000 for the webhook server
 EXPOSE 9000
+
+# Allow AWS credentials and parameters 
+ENV AWS_ACCESS_KEY ""
+ENV AWS_SECRET_KEY ""
+ENV AWS_BUCKET "fmi-standard"
 
 RUN chown -R builder /home/builder
 RUN chmod +x /home/builder/*.sh

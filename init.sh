@@ -6,7 +6,7 @@
 # Update Git settings so we don't grab unnecessarily files
 cp data/.gitconfig ~/.gitconfig
 
-git clone https://github.com/modelica/fmi-standard.org.git site
+git clone https://github.com/modelica/fmi-standard.org.git data/site
 
 # Update the repositories to the latest versions.  This takes care of
 # downloading an initial version of all vendor repositories.  These
