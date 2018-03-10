@@ -5,7 +5,7 @@ I deployed this on Digital Ocean with a pretty trivial set of commands:
 ```sh
 $ docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN cross-check
 $ eval $(docker-machine env cross-check)
-$ docker run -d -p 9000:9000 --restart always --name xc modelica/crosscheck-update
+$ docker run -d -p 9000:9000 --restart always -e AWS_ACCESS_KEY=... -e AWS_SECRET_KEY=... --name xc modelica/crosscheck-update
 ```
 
 To see what is going on with the machine during builds, just run:
