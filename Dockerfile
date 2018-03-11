@@ -13,6 +13,7 @@ RUN apt-get install git -y
 RUN apt-get install s3cmd -y
 RUN apt-get install ruby ruby-dev -y
 RUN apt-get install webhook -y
+RUN apt-get install vim -y
 
 # Now install the XC scripts
 RUN npm install -g @modelica/fmi-xc-scripts

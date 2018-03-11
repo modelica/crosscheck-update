@@ -22,4 +22,9 @@ bundle exec jekyll b
 
 # If we have AWS credentials, attempt to put the new site contents in the
 # specified bucket
-[ $AWS_ACCESS_KEY!="" ] && [ $AWS_SECRET_KEY!="" ] && [ $AWS_BUCKET!="" ] && s3cmd -c ../s3.cfg put --recursive --acl-public _site/* s3://$AWS_BUCKET && s3cmd modify -m text/css s3://$S3BUCKET/css/main.css
+if [[ $AWS_ACESS_KEY!="" && $AWS_SECRET_KEY!="" && $AWS_BUCKET!="" ]] 
+then
+  s3cmd -c ../s3.cfg put --recursive --acl-public _site/* s3://$AWS_BUCKET
+  s3cmd modify -m text/css s3://$S3BUCKET/css/main.css
+fi;
+# [ $AWS_ACCESS_KEY!="" ] && [ $AWS_SECRET_KEY!="" ] && [ $AWS_BUCKET!="" ] && s3cmd -c ../s3.cfg put --recursive --acl-public _site/* s3://$AWS_BUCKET && s3cmd modify -m text/css s3://$S3BUCKET/css/main.css
