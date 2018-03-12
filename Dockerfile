@@ -17,6 +17,7 @@ RUN apt-get install vim -y
 
 # Now install the XC scripts
 RUN npm install -g @modelica/fmi-xc-scripts
+RUN npm install -g netlify-cli
 
 # Install jekyll and bundler
 RUN gem install jekyll bundler
