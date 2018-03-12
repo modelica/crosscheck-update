@@ -14,6 +14,7 @@ RUN apt-get install s3cmd -y
 RUN apt-get install ruby ruby-dev -y
 RUN apt-get install webhook -y
 RUN apt-get install vim -y
+RUN apt-get install sudo -y
 
 # Now install the XC scripts
 RUN npm install -g @modelica/fmi-xc-scripts
@@ -30,7 +31,7 @@ COPY hooks.json /etc/webhooks
 
 # Create a non-root user to do the actual work and a home directory for that
 # user in /home/builder
-RUN useradd -ms /bin/bash builder
+RUN useradd -ms /bin/bash builder && adduser builder sudo
 
 # Copy our build and start scripts to the working directory
 COPY build.sh init.sh gen.sh webhook.sh /home/builder/
