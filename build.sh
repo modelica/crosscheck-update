@@ -27,4 +27,9 @@ then
   s3cmd -c ../s3.cfg put --recursive --acl-public _site/* s3://$AWS_BUCKET
   s3cmd modify -m text/css s3://$AWS_BUCKET/css/main.css
   s3cmd modify -m image/svg+xml s3://$AWS_BUCKET/assets/img/fmi-logo.svg
-fi;
+fi
+
+if [[ $NETLIFY_TOKEN!="" && $NETLIFY_SITE ]]
+then
+  netlify deploy -s $NETLIFY_SITE -p /home/builder/data/site/_site --access-token $NETLIFY_TOKEN
+fi

@@ -52,6 +52,9 @@ ENV AWS_ACCESS_KEY ""
 ENV AWS_SECRET_KEY ""
 ENV AWS_BUCKET "fmi-standard"
 
+ENV NETLIFY_TOKEN ""
+ENV NETLIFY_SITE 99c55eb2-e26a-4fc1-bfdc-e994b24f6d1b
+
 RUN chown -R builder /home/builder
 RUN chmod +x /home/builder/*.sh
 USER builder
